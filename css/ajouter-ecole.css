@@ -1,0 +1,100 @@
+.ajout-intro { padding-top: 40px; }
+.ajout-intro h1 { font-size: 40px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-top: 28px; }
+.ajout-intro .sous-titre { margin-top: 16px; }
+
+.ajout-grille {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.ajout-form { background: var(--carte); border-radius: 16px; padding: 32px; }
+.ajout-form > h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.ajout-note { font-size: 10px; color: var(--texte-doux); margin-top: 18px; }
+
+.form-section { margin-top: 28px; display: grid; gap: 18px; }
+.form-section h3 { display: flex; align-items: baseline; gap: 6px; font-size: 20px; font-weight: 600; }
+.form-section h3 .num { font-size: 11px; font-weight: 600; align-self: flex-start; }
+.form-section-texte { font-size: 11px; color: var(--texte-doux); margin-top: -8px; }
+
+.multi { position: relative; }
+.multi summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.multi summary::-webkit-details-marker { display: none; }
+.multi summary svg { width: 18px; height: 18px; flex: none; transition: transform 0.2s; }
+.multi[open] summary svg { transform: rotate(180deg); }
+.multi-texte { color: var(--texte-doux); }
+.multi-texte.choisi { color: var(--texte); }
+.multi-liste {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-top: 8px;
+  padding: 18px;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+}
+
+.depot {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 28px 20px;
+  border: 1.5px dashed var(--bordure-champ);
+  border-radius: 12px;
+  background: var(--champ);
+  text-align: center;
+}
+.depot.survol { border-color: var(--bleu-fort); background: var(--survol); }
+.depot svg { width: 22px; height: 22px; }
+.depot strong { font-size: 14px; font-weight: 600; margin-top: 4px; }
+.depot small { font-size: 10px; color: var(--texte-doux); }
+.depot .btn { height: 38px; margin-top: 10px; font-size: 12px; }
+.fichiers { display: grid; gap: 6px; font-size: 12px; }
+.fichiers li { display: flex; justify-content: space-between; gap: 12px; background: var(--fond); border-radius: 8px; padding: 8px 12px; }
+.fichiers li.erreur { color: var(--erreur-texte); }
+
+.astuce { background: var(--bleu-clair); border-radius: 12px; padding: 14px 16px; }
+.astuce strong { display: block; font-size: 11px; font-weight: 700; color: var(--bleu); }
+.astuce p { font-size: 11px; color: var(--texte-doux); margin-top: 4px; }
+
+.form-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+.form-fin { font-size: 10px; color: var(--texte-doux); }
+
+.succes { text-align: center; padding: 32px 12px; }
+.succes h2 { font-size: 24px; font-weight: 600; }
+.succes p { font-size: 13px; color: var(--texte-doux); margin-top: 10px; }
+.succes .btn { margin-top: 20px; }
+
+.ensuite { background: var(--bleu-clair); border-radius: 16px; padding: 24px; }
+.ensuite h2 { font-size: 22px; font-weight: 600; }
+.ensuite ol { display: grid; gap: 22px; margin-top: 22px; }
+.ensuite li > span { font-size: 11px; font-weight: 600; }
+.ensuite h3 { font-size: 14px; font-weight: 600; margin-top: 10px; }
+.ensuite li p { font-size: 11px; color: var(--texte-doux); margin-top: 6px; }
+.aide-boite { background: var(--carte); border-radius: 12px; padding: 14px 16px; margin-top: 24px; }
+.aide-boite strong { display: block; font-size: 12px; font-weight: 600; color: var(--bleu); }
+.aide-boite a { display: block; font-size: 11px; margin-top: 6px; }
+
+@media (max-width: 1024px) {
+  .ajout-intro h1 { font-size: 34px; }
+  .ajout-grille { grid-template-columns: 1fr; margin-top: 28px; }
+}
+
+@media (max-width: 600px) {
+  .ajout-intro { padding-top: 28px; }
+  .ajout-intro h1 { font-size: 28px; margin-top: 18px; }
+  .ajout-form { padding: 20px; }
+  .ajout-form > h2 { font-size: 24px; }
+  .form-actions { grid-template-columns: 1fr; }
+  .multi-liste { grid-template-columns: 1fr; }
+  .ensuite { padding: 20px; }
+}

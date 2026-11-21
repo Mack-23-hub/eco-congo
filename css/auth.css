@@ -1,0 +1,67 @@
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 64px;
+  align-items: center;
+  padding-block: 40px;
+}
+
+.auth-visuel { background: var(--carte); border-radius: 16px; padding: 24px; }
+.auth-visuel .photo { height: 340px; }
+.auth-visuel h2 { font-size: 36px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-top: 28px; }
+.auth-visuel p { font-size: 14px; color: var(--texte-doux); margin-top: 20px; }
+.auth-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.auth-visuel .auth-badge { color: var(--noir); }
+.auth-badge svg { width: 18px; height: 18px; flex: none; }
+
+.auth-carte { background: var(--carte); border-radius: 16px; padding: 24px; }
+.auth-carte h1 { font-size: 32px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-top: 8px; }
+.auth-sous { font-size: 13px; color: var(--texte-doux); margin-top: 8px; }
+.auth-form { display: grid; gap: 16px; margin-top: 22px; }
+
+.auth-ligne { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.lien-gras { font-size: 11px; font-weight: 700; }
+.lien-gras:hover { text-decoration: underline; }
+
+.auth-bas { text-align: center; font-size: 11px; color: var(--texte-doux); margin-top: 22px; }
+.auth-bas a { display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 700; color: var(--noir); }
+.auth-bas a:hover { text-decoration: underline; }
+
+.note-prive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: var(--texte-doux);
+}
+.note-prive svg { width: 18px; height: 18px; flex: none; color: var(--bleu); }
+.note-prive--bleu { color: var(--bleu); }
+
+.onglets-choix { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+.onglets-choix button {
+  height: 40px;
+  border-radius: 10px;
+  background: var(--champ);
+  color: var(--texte-doux);
+  font-size: 12px;
+  font-weight: 500;
+}
+.onglets-choix button[aria-pressed="true"] { background: var(--bleu-clair); color: var(--texte); font-weight: 600; }
+.onglets-choix + .auth-form { margin-top: 20px; }
+
+@media (max-width: 1024px) {
+  .auth { grid-template-columns: 1fr; padding-block: 36px; }
+  .auth-visuel { display: none; }
+}
+@media (max-width: 600px) {
+  .auth { padding-block: 24px; }
+  .auth-carte h1 { font-size: 28px; }
+}

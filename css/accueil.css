@@ -1,0 +1,135 @@
+.kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.btn-pale { background: #9aa3bf; color: #fff; }
+
+.bloc { margin-top: 40px; }
+.titre-section { font-size: 26px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+.titre-sous { font-size: 13px; color: var(--texte-doux); margin-top: 6px; }
+.titre-ligne { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.lien-bleu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bleu);
+  white-space: nowrap;
+}
+.lien-bleu svg { width: 14px; height: 14px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 48px;
+  margin-top: 36px;
+  padding: 32px;
+  background: var(--carte);
+  border: 1.5px solid var(--noir);
+  border-radius: 16px;
+}
+.hero-texte { display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; padding-block: 4px; }
+.hero h1 {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.01em;
+  max-width: 540px;
+}
+.hero-sous { font-size: 14px; color: var(--texte-doux); }
+.hero-lien {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bleu);
+}
+.hero-lien svg { width: 18px; height: 18px; flex: none; }
+
+.hero-ecole { display: block; }
+.hero-ecole .photo { height: 310px; }
+.hero-ecole-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-ecole-ligne svg { width: 18px; height: 18px; }
+.hero-ecole:hover .hero-ecole-ligne svg { transform: translateX(4px); }
+
+.visites {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: var(--carte);
+  border: 1px solid var(--noir);
+  border-radius: 16px;
+}
+.visites h2 { font-size: 18px; font-weight: 600; margin-top: 6px; }
+.progression { margin-top: 10px; }
+.progression-piste { height: 4px; background: var(--piste); border-radius: 2px; overflow: hidden; }
+.progression-piste span { display: block; height: 100%; background: var(--bleu-fort); border-radius: 2px; }
+.progression-pct { font-size: 10px; font-weight: 600; color: var(--bleu); text-align: right; margin-top: 4px; }
+.visites-actions { display: flex; align-items: center; gap: 28px; }
+.lien-tous { font-size: 12px; font-weight: 600; }
+.lien-tous:hover { text-decoration: underline; }
+
+.bloc .recherche { margin-top: 20px; }
+.filtres-rapides { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.filtres-rapides select {
+  width: auto;
+  height: 36px;
+  padding: 0 38px 0 14px;
+  border-color: transparent;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--texte);
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.cartes-une { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+
+.carte-ecole--haute .carte-favori { display: none; }
+
+.trois-etapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.trois-etapes li { background: var(--gris-etape); border-radius: 16px; padding: 24px; }
+.etape-num { font-size: 12px; font-weight: 600; color: var(--bleu); }
+.trois-etapes h3 { font-size: 22px; font-weight: 600; line-height: 1.25; margin-top: 14px; }
+.trois-etapes p { font-size: 12px; color: var(--texte-doux); margin-top: 10px; }
+
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr 340px; gap: 32px; padding: 28px; }
+  .hero h1 { font-size: 30px; }
+  .hero-ecole .photo { height: 240px; }
+  .titre-section { font-size: 24px; }
+  .carte-ecole--haute .carte-favori { display: grid; }
+  .trois-etapes { gap: 14px; }
+  .trois-etapes h3 { font-size: 20px; }
+}
+
+@media (max-width: 600px) {
+  .hero { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; padding: 20px; }
+  .hero h1 { font-size: 28px; }
+  .hero-ecole .photo { height: 210px; }
+
+  .visites { grid-template-columns: 1fr; gap: 16px; padding: 20px; }
+  .visites-actions { justify-content: flex-start; gap: 24px; }
+
+  .bloc { margin-top: 32px; }
+  .titre-section { font-size: 22px; }
+  .cartes-une { grid-template-columns: 1fr; gap: 16px; }
+  .trois-etapes { grid-template-columns: 1fr; }
+}

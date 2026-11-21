@@ -1,0 +1,158 @@
+:root {
+  --bleu: #505f81;
+  --bleu-fort: #505f81;
+  --bleu-clair: #ced7e4;
+  --fond: #f7f7f7;
+  --carte: #ffffff;
+  --bordure: #dfdfdf;
+  --texte: #1a1a1a;
+  --texte-doux: #5b6270;
+  --noir: #000000;
+  --noir-texte: #ffffff;
+  --gris-etape: #d3d6d9;
+  --puce: #edeae5;
+  --puce-survol: #e3dfd8;
+  --etiquette: #eceef0;
+  --champ: #f7f7f7;
+  --bordure-champ: #c9c9c9;
+  --survol: #f1f3f8;
+  --piste: #e8e8e8;
+  --stat-fond: #ecedeb;
+  --erreur-fond: #efe3e3;
+  --erreur-texte: #5a2d2d;
+  --entete-fond: #505f81;
+  --entete-texte: #ffffff;
+  --entete-actif: #000000;
+  --profil-fond: #ffffff;
+  --photo-fond: #e6e6e6;
+  --photo-a: #ebebeb;
+  --photo-b: #f9f9f9;
+  --map-fond: #e4e8e1;
+  --map-route: #ffffff;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  color-scheme: light;
+  --rayon: 12px;
+  --police: "Inter", system-ui, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  --bleu: #a9b9e0;
+  --bleu-fort: #62749c;
+  --bleu-clair: #2a3350;
+  --fond: #12151b;
+  --carte: #1b1f27;
+  --bordure: #343a47;
+  --texte: #eceef3;
+  --texte-doux: #a4adbd;
+  --noir: #f2f4f8;
+  --noir-texte: #12151b;
+  --gris-etape: #272c37;
+  --puce: #2a2f3a;
+  --puce-survol: #343a47;
+  --etiquette: #2a2f3a;
+  --champ: #232832;
+  --bordure-champ: #4a5262;
+  --survol: #26304a;
+  --piste: #343a47;
+  --stat-fond: #232832;
+  --erreur-fond: #3d2a2c;
+  --erreur-texte: #f0c9c9;
+  --entete-fond: #232b3f;
+  --entete-texte: #c3cbdc;
+  --entete-actif: #ffffff;
+  --profil-fond: #e6eaf2;
+  --photo-fond: #1f232b;
+  --photo-a: #242932;
+  --photo-b: #2a2f3a;
+  --map-fond: #232a28;
+  --map-route: #3a4240;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23eceef3' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bleu: #a9b9e0;
+    --bleu-fort: #62749c;
+    --bleu-clair: #2a3350;
+    --fond: #12151b;
+    --carte: #1b1f27;
+    --bordure: #343a47;
+    --texte: #eceef3;
+    --texte-doux: #a4adbd;
+    --noir: #f2f4f8;
+    --noir-texte: #12151b;
+    --gris-etape: #272c37;
+    --puce: #2a2f3a;
+    --puce-survol: #343a47;
+    --etiquette: #2a2f3a;
+    --champ: #232832;
+    --bordure-champ: #4a5262;
+    --survol: #26304a;
+    --piste: #343a47;
+    --stat-fond: #232832;
+    --erreur-fond: #3d2a2c;
+    --erreur-texte: #f0c9c9;
+    --entete-fond: #232b3f;
+    --entete-texte: #c3cbdc;
+    --entete-actif: #ffffff;
+    --profil-fond: #e6eaf2;
+    --photo-fond: #1f232b;
+    --photo-a: #242932;
+    --photo-b: #2a2f3a;
+    --map-fond: #232a28;
+    --map-route: #3a4240;
+    --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23eceef3' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--police);
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+ul, ol { list-style: none; }
+
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 2px solid var(--bleu); outline-offset: 2px; }
+
+.conteneur {
+  width: min(1280px, 100% - 160px);
+  margin-inline: auto;
+}
+@media (max-width: 1024px) { .conteneur { width: calc(100% - 80px); } }
+@media (max-width: 600px)  { .conteneur { width: calc(100% - 40px); } }
+
+.photo {
+  background: var(--photo-fond);
+  background-image: repeating-conic-gradient(var(--photo-a) 0 25%, var(--photo-b) 0 50%);
+  background-size: 40px 40px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.invisible {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

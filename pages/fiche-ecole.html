@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECAM · Eco-Congo</title>
+
+  <script src="../js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/composants.css">
+  <link rel="stylesheet" href="../css/fiche-ecole.css">
+</head>
+<body>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="../index.html">ECO-CONGO</a>
+      <div class="entete-droite">
+        <nav class="menu" id="menu" aria-label="Navigation principale">
+          <a href="../index.html">Accueil</a>
+          <a href="../index.html#objectif">Objectif</a>
+          <a href="resultats.html" class="actif" aria-current="page">Écoles</a>
+          <a href="favoris.html">Favoris</a>
+        </nav>
+        <button class="theme-btn" id="theme-btn" type="button" aria-pressed="false" aria-label="Passer en mode sombre">
+          <svg class="ico-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+          <svg class="ico-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a class="profil" href="connexion.html" aria-label="Mon profil"></a>
+        <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="conteneur">
+
+    <nav class="fil-ariane" aria-label="Fil d'Ariane">
+      <a href="resultats.html">Écoles</a><span>/</span><a href="resultats.html?ville=Kinshasa">Kinshasa</a><span>/</span><span aria-current="page">ECAM</span>
+    </nav>
+
+    <div class="fiche-entete">
+      <div>
+        <h1>ECAM</h1>
+        <p class="fiche-meta">Kinshasa, RDC &nbsp;·&nbsp; Établissement privé</p>
+      </div>
+      <button class="btn btn-contour btn-favori" id="btn-favori" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <span id="btn-favori-texte">Ajouter aux favoris</span>
+      </button>
+    </div>
+
+    <section class="fiche-hero" aria-label="Aperçu de la visite">
+      <div class="photo" role="img" aria-label="Photo de l'ECAM"></div>
+      <span class="badge-vr badge-apercu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12a4 4 0 0 1 4 4v2a3 3 0 0 1-5.2 2l-1.3-1.5h-7L7.2 16A3 3 0 0 1 2 14v-2a4 4 0 0 1 4-4z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="11" r=".7"/><circle cx="18" cy="13" r=".7"/></svg> Aperçu 360°</span>
+      <div class="fiche-hero-texte">
+        <h2>Comme si tu y étais.</h2>
+        <p>Explore les espaces et imagine ton quotidien.</p>
+        <a class="btn btn-noir" href="preparer-visite.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12a4 4 0 0 1 4 4v2a3 3 0 0 1-5.2 2l-1.3-1.5h-7L7.2 16A3 3 0 0 1 2 14v-2a4 4 0 0 1 4-4z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="11" r=".7"/><circle cx="18" cy="13" r=".7"/></svg> Lancer la visite en casque VR</a>
+      </div>
+    </section>
+
+    <nav class="onglets-fiche" id="onglets" aria-label="Sections de la fiche">
+      <a href="#presentation" class="actif">Présentation</a>
+      <a href="#filieres">Filières</a>
+      <a href="#infos">Informations</a>
+      <a href="#galerie">Galerie</a>
+    </nav>
+
+    <div class="fiche-grille">
+
+      <article class="fiche-carte" id="presentation">
+        <h2>Une école à découvrir.</h2>
+        <p class="fiche-texte">Découvre ECAM, ses espaces d’apprentissage et sa vie scolaire. La visite virtuelle t’aide à te projeter avant de rencontrer l’équipe pédagogique.</p>
+
+        <h3 id="filieres">Filières proposées</h3>
+        <ul class="filieres">
+          <li><h4>Sciences</h4><p>Mathématiques, biologie et sciences appliquées</p></li>
+          <li><h4>Informatique</h4><p>Culture numérique et outils informatiques</p></li>
+          <li><h4>Gestion</h4><p>Économie, organisation et entrepreneuriat</p></li>
+        </ul>
+
+        <p class="a-confirmer">
+          <strong>À confirmer auprès de l’établissement</strong>
+          <span>Filières, frais et coordonnées présentés à titre d’exemple dans cette maquette.</span>
+        </p>
+      </article>
+
+      <aside class="fiche-carte fiche-infos" id="infos" aria-label="Informations pratiques">
+        <h2>Informations pratiques</h2>
+
+        <p class="info-label">Frais de scolarité</p>
+        <p class="info-grand">Sur demande</p>
+        <p class="info-texte">Contacte l’école pour les tarifs et les modalités d’inscription.</p>
+
+        <p class="info-label">Adresse</p>
+        <p class="info-valeur">Kinshasa, République démocratique du Congo<br>Adresse complète à confirmer.</p>
+
+        <div class="carte-indicative" role="img" aria-label="Carte indicative de Kinshasa">
+          <span class="carte-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Kinshasa</span>
+          <span class="carte-legende">Carte indicative · non géolocalisée</span>
+        </div>
+
+        <p class="info-label">Contact</p>
+        <p class="info-valeur">admissions@ecam.example</p>
+        <a class="btn btn-contour btn-plein btn-haut" href="mailto:admissions@ecam.example"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Contacter l’école</a>
+      </aside>
+    </div>
+
+    <div class="galerie-entete" id="galerie">
+      <h2>Un aperçu de la vie à l’école</h2>
+      <span>3 photos</span>
+    </div>
+    <div class="galerie">
+      <figure><div class="photo" role="img" aria-label="La cour du campus"></div><figcaption>La cour du campus</figcaption></figure>
+      <figure><div class="photo" role="img" aria-label="Les salles de classe"></div><figcaption>Les salles de classe</figcaption></figure>
+      <figure><div class="photo" role="img" aria-label="Les espaces extérieurs"></div><figcaption>Les espaces extérieurs</figcaption></figure>
+    </div>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="pied-haut">
+        <div>
+          <strong class="logo">ECO-CONGO</strong>
+          <p class="pied-slogan">Ton école. Ton avenir. Une visite d’avance.</p>
+        </div>
+        <div class="pied-droite">
+          <div class="pied-contact">
+            <p>Une question ? Parlons-en.</p>
+            <a href="mailto:contact@eco-congo.example">contact@eco-congo.example</a>
+          </div>
+          <a class="pied-ajout" href="ajouter-ecole.html">Ajouter mon école
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="pied-bas">
+        <small>© 2026 Eco-Congo</small>
+        <p class="pied-legal"><a href="#">Confidentialité</a> · <a href="#">Conditions d’utilisation</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/fiche-ecole.js"></script>
+</body>
+</html>

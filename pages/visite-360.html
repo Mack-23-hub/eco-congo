@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visite immersive · ECAM · Eco-Congo</title>
+
+  <script src="../js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/composants.css">
+  <link rel="stylesheet" href="../css/visite-360.css">
+</head>
+<body class="page-visite">
+
+  <div class="visite">
+
+    <div class="scene" id="scene" role="img" aria-label="Vue à 360 degrés de l'espace visité"></div>
+
+    <div class="visite-haut">
+      <div>
+        <p class="visite-ecole">ECAM</p>
+        <p class="visite-sous">VISITE IMMERSIVE · 360°</p>
+      </div>
+      <a class="btn btn-noir" href="preparer-visite.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        Quitter
+      </a>
+    </div>
+
+    <div class="point-central" id="point-central">
+      <p class="bulle">
+        <span class="cache-mobile">Clique et glisse pour regarder autour de toi</span>
+        <span class="visible-mobile">Glisse pour regarder autour de toi</span>
+      </p>
+      <button class="point-fleche" id="point-fleche" type="button" aria-label="Aller à l'espace suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+      </button>
+      <p class="point-etiquette" id="point-etiquette">Vers la bibliothèque</p>
+    </div>
+
+    <div class="visite-bas">
+
+      <section class="espace-carte" aria-live="polite">
+        <div>
+          <p class="espace-compteur" id="espace-compteur">ESPACE 02 / 05</p>
+          <h1 id="espace-titre">Salle de classe</h1>
+          <p class="espace-lieu" id="espace-lieu">ECAM · Bâtiment principal</p>
+        </div>
+        <div class="espace-boutons">
+          <button class="btn btn-contour" id="btn-prec" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            <span class="cache-mobile">Salle précédente</span>
+            <span class="visible-mobile" id="nom-prec">Cour</span>
+          </button>
+          <button class="btn btn-noir" id="btn-suiv" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="cache-mobile">Salle suivante</span>
+            <span class="visible-mobile" id="nom-suiv">Bibliothèque</span>
+          </button>
+        </div>
+      </section>
+
+      <nav class="plan" id="plan" aria-label="Plan de l'école" hidden></nav>
+
+      <div class="barre-outils">
+        <div class="outils-gauche">
+          <button class="btn btn-contour" id="btn-plan" type="button" aria-expanded="false" aria-controls="plan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5zM9 4v13M15 6.5v13"/></svg>
+            Plan de l’école
+          </button>
+          <button class="btn btn-contour cache-mobile" id="btn-plein-ecran" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+            Plein écran
+          </button>
+        </div>
+        <button class="btn btn-noir" id="btn-vr" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12a4 4 0 0 1 4 4v2a3 3 0 0 1-5.2 2l-1.3-1.5h-7L7.2 16A3 3 0 0 1 2 14v-2a4 4 0 0 1 4-4z"/><path d="M7 10.5v3M5.5 12h3"/><circle cx="16" cy="11" r=".7"/><circle cx="18" cy="13" r=".7"/></svg>
+          <span class="cache-mobile">Passer en casque VR</span>
+          <span class="visible-mobile">Mode VR</span>
+        </button>
+      </div>
+    </div>
+
+    <p class="message" id="message" role="status" hidden></p>
+  </div>
+
+  <script src="../js/visite-360.js"></script>
+</body>
+</html>

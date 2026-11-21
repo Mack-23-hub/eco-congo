@@ -1,0 +1,81 @@
+.titre-etroit { max-width: 420px; }
+
+.preparer-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.ecole-resume {
+  background: var(--carte);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.ecole-resume .photo { height: 350px; }
+.ecole-resume-texte { padding: 24px; }
+.ecole-resume-texte h2 { font-size: 24px; font-weight: 600; }
+.ecole-resume-meta { font-size: 13px; color: var(--texte-doux); margin-top: 10px; }
+
+.etiquettes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.etiquettes li {
+  background: var(--etiquette);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.preparer-droite { display: flex; flex-direction: column; gap: 24px; }
+
+.info-vr {
+  background: var(--bleu-clair);
+  border-radius: 16px;
+  padding: 24px;
+}
+.info-vr h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--bleu);
+}
+.info-vr h2 svg { width: 22px; height: 22px; flex: none; }
+.info-vr p { font-size: 13px; color: var(--texte-doux); margin-top: 14px; }
+.info-vr .info-vr-liste { font-size: 12px; font-weight: 600; color: var(--bleu); margin-top: 14px; }
+
+.etapes { display: flex; flex-direction: column; gap: 22px; }
+.etapes li { display: flex; align-items: center; gap: 16px; }
+.etape-numero {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: var(--carte);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.etapes h3 { font-size: 15px; font-weight: 600; }
+.etapes p { font-size: 13px; color: var(--texte-doux); }
+
+.preparer-boutons { display: flex; flex-direction: column; gap: 10px; }
+.btn-haut { height: 48px; }
+.note-securite { font-size: 12px; color: var(--texte-doux); margin-top: -12px; }
+
+@media (max-width: 1024px) {
+  .preparer-grille { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
+  .ecole-resume .photo { height: 320px; }
+}
+
+@media (max-width: 600px) {
+  .preparer-grille { margin-top: 28px; gap: 24px; }
+  .ecole-resume .photo { height: 230px; }
+  .ecole-resume-texte { padding: 20px; }
+  .ecole-resume-texte h2 { font-size: 22px; }
+  .info-vr { padding: 20px; }
+  .info-vr h2 { align-items: flex-start; }
+}

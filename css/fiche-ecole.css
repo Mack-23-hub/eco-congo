@@ -1,0 +1,130 @@
+html { scroll-behavior: smooth; }
+section[id], article[id], aside[id] { scroll-margin-top: 24px; }
+
+.fiche-entete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+}
+.fiche-entete h1 { font-size: 52px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+.fiche-meta { font-size: 13px; color: var(--texte-doux); margin-top: 10px; }
+.btn-favori svg { width: 18px; height: 18px; }
+.btn-favori[aria-pressed="true"] svg { fill: currentColor; }
+
+.fiche-hero {
+  position: relative;
+  height: 421px;
+  margin-top: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.fiche-hero .photo { position: absolute; inset: 0; height: 100%; }
+.badge-apercu { position: absolute; top: 24px; left: 24px; }
+.fiche-hero-texte {
+  position: absolute;
+  left: 24px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.fiche-hero-texte h2 { font-size: 32px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+.fiche-hero-texte p { font-size: 12px; }
+
+.onglets-fiche { display: flex; gap: 32px; margin-top: 28px; }
+.onglets-fiche a { font-size: 12px; color: var(--texte-doux); padding-block: 4px; }
+.onglets-fiche a.actif { color: var(--noir); font-weight: 700; }
+.onglets-fiche a:hover { color: var(--noir); }
+
+.fiche-grille {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 24px;
+  align-items: start;
+  margin-top: 24px;
+}
+.fiche-carte { background: var(--carte); border-radius: 16px; padding: 24px; }
+.fiche-carte h2 { font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+.fiche-texte { font-size: 13px; color: var(--texte-doux); margin-top: 20px; max-width: 700px; }
+.fiche-carte h3 { font-size: 20px; font-weight: 600; margin-top: 32px; }
+
+.filieres { display: grid; gap: 16px; margin-top: 20px; }
+.filieres li { background: var(--fond); border-radius: 12px; padding: 16px 18px; }
+.filieres h4 { font-size: 13px; font-weight: 600; }
+.filieres p { font-size: 12px; color: var(--texte-doux); margin-top: 6px; }
+
+.a-confirmer { margin-top: 28px; }
+.a-confirmer strong { display: block; font-size: 11px; font-weight: 700; color: var(--bleu); }
+.a-confirmer span { display: block; font-size: 11px; color: var(--texte-doux); margin-top: 6px; }
+
+.fiche-infos h2 { font-size: 20px; }
+.info-label { font-size: 11px; color: var(--texte-doux); margin-top: 24px; }
+.fiche-infos h2 + .info-label { margin-top: 22px; }
+.info-grand { font-size: 20px; font-weight: 600; margin-top: 18px; }
+.info-texte { font-size: 12px; color: var(--texte-doux); margin-top: 20px; }
+.info-valeur { font-size: 12px; margin-top: 18px; }
+
+.carte-indicative {
+  position: relative;
+  height: 160px;
+  margin-top: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    linear-gradient(118deg, transparent 0 21%, var(--map-route) 21% 29%, transparent 29%),
+    linear-gradient(177deg, transparent 0 54%, var(--map-route) 54% 59%, transparent 59%),
+    var(--map-fond);
+}
+.carte-pin {
+  position: absolute;
+  left: 44px;
+  top: 62px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--carte);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.carte-pin svg { width: 16px; height: 16px; color: var(--bleu); }
+.carte-legende { position: absolute; left: 12px; bottom: 10px; font-size: 10px; color: var(--texte-doux); }
+
+.fiche-infos .btn { margin-top: 18px; }
+
+.galerie-entete { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 56px; }
+.galerie-entete h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.galerie-entete span { font-size: 11px; color: var(--texte-doux); }
+.galerie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+.galerie .photo { height: 220px; border-radius: 8px; }
+.galerie figcaption { font-size: 11px; color: var(--texte-doux); margin-top: 12px; }
+
+@media (max-width: 1024px) {
+  .fiche-entete h1 { font-size: 44px; }
+  .fiche-hero { height: 232px; margin-top: 32px; }
+  .fiche-grille { grid-template-columns: 1fr; }
+  .galerie-entete { margin-top: 40px; }
+  .galerie .photo { height: 150px; }
+}
+
+@media (max-width: 600px) {
+  .fiche-entete { flex-direction: column; gap: 20px; margin-top: 20px; }
+  .fiche-entete h1 { font-size: 38px; }
+  .fiche-entete .btn { width: 100%; }
+  .fiche-hero { height: 205px; margin-top: 24px; }
+  .badge-apercu { top: 16px; left: 16px; }
+  .fiche-hero-texte { left: 16px; right: 16px; bottom: 20px; }
+  .fiche-hero-texte h2 { font-size: 22px; }
+  .fiche-hero-texte .btn { width: 100%; }
+  .onglets-fiche { gap: 20px; overflow-x: auto; }
+  .onglets-fiche a { white-space: nowrap; }
+  .fiche-carte { padding: 20px; }
+  .fiche-carte h2 { font-size: 24px; }
+  .galerie { grid-template-columns: 1fr; gap: 16px; }
+  .galerie .photo { height: 190px; }
+  .galerie-entete h2 { font-size: 24px; }
+}

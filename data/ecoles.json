@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ecam",
+    "nom": "ECAM",
+    "ville": "Kinshasa",
+    "type": "Privé",
+    "filieres": ["Sciences", "Informatique", "Gestion"],
+    "vr": true
+  },
+  {
+    "id": "college-horizon",
+    "nom": "Collège Horizon",
+    "ville": "Kinshasa",
+    "type": "Privé",
+    "filieres": ["Sciences", "Lettres", "Pédagogie"],
+    "vr": true
+  },
+  {
+    "id": "institut-lumiere",
+    "nom": "Institut Lumière",
+    "ville": "Kinshasa",
+    "type": "Privé",
+    "filieres": ["Informatique", "Gestion", "Commerce"],
+    "vr": true
+  },
+  {
+    "id": "lycee-exemple-goma",
+    "nom": "Lycée Exemple de Goma",
+    "ville": "Goma",
+    "type": "Public",
+    "filieres": ["Sciences", "Lettres"],
+    "vr": false
+  },
+  {
+    "id": "institut-exemple-lubumbashi",
+    "nom": "Institut Exemple de Lubumbashi",
+    "ville": "Lubumbashi",
+    "type": "Privé",
+    "filieres": ["Commerce", "Gestion"],
+    "vr": false
+  }
+]
